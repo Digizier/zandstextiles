@@ -1,0 +1,25 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# Build & Static Export Outputs
+/.next/
+/out/
+/.wrangler/
+/.vercel/
+next-env.d.ts
+*.tsbuildinfo
+
+# Local Environment Variables & Secrets
+.env
+.env*.local
+.env.development
+.env.production
+
+# Logs & OS Artifacts
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
