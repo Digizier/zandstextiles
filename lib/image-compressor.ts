@@ -74,9 +74,7 @@ export async function compressAndUploadImage(
 
               if (error) {
                 console.error('Storage upload error:', error);
-                // Fallback to object public URL format
-                const publicUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/${bucket}/${cleanFileName}`;
-                resolve({ url: publicUrl, originalSizeKb, compressedSizeKb });
+                reject(new Error(error.message || 'Cloud storage upload failed'));
                 return;
               }
 
